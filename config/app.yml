@@ -10,6 +10,9 @@ all:
     # specify the jQuery UI theme folder
     theme_dir:      /sfAdminThemejRollerPlugin/css/jquery
 
+    # specify the jQuery UI theme filename (only used if theme_switcher is not active)
+    theme_file:    jquery-ui.custom.css
+
     # ThemeRoller name
     # (depends on theme_dir option)
     # browse: http://jqueryui.com/themeroller/
