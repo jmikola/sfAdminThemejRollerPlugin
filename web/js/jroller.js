@@ -64,7 +64,7 @@ jQuery().ready(function(){
 				}, 
 				"Reset": function() { 
 					$(this).dialog("close");
-					location.href = $('#sf_admin_filter_reset').attr('href');
+					$('#sf_admin_filter_reset').click();
 				} 
 			}
 		});
