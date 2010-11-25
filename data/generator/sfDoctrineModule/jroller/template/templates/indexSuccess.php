@@ -9,7 +9,7 @@
   </div>
 
   <?php if ($this->configuration->hasFilterForm()): ?>
-    <div id="sf_admin_bar ui-helper-hidden" style="display:none">
+    <div id="sf_admin_bar" class="ui-helper-hidden" style="display:none">
       [?php include_partial('<?php echo $this->getModuleName() ?>/filters', array('form' => $filters, 'configuration' => $configuration)) ?]
     </div>
   <?php endif; ?>
