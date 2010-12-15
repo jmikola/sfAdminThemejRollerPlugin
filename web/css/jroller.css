@@ -15,6 +15,11 @@ html { overflow: -moz-scrollbars-vertical !important; }
 	padding: 10px;
 }
 
+/* Global errors */
+.sf_admin_global_errors { margin: 10px 0; }
+.sf_admin_global_errors .ui-state-error { padding: 10px; }
+.sf_admin_global_errors .error_list { margin-bottom: 0; }
+
 #sf_admin_container { position: relative; padding-bottom: .5em; }
   #sf_admin_container .ui-widget-header h1 {
     font-size: 1.4em;

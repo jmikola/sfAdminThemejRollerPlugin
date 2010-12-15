@@ -13,10 +13,14 @@
     [?php echo $form->renderHiddenFields() ?]
 
     [?php if ($form->hasGlobalErrors()): ?]
-      [?php echo $form->renderGlobalErrors() ?]
+      <div class="sf_admin_global_errors ui-widget">
+        <div class="errors ui-state-error ui-corner-all">
+          <span class="ui-icon ui-icon-alert floatleft"></span>
+          [?php echo $form->renderGlobalErrors() ?]
+        </div>
+      </div>
     [?php endif; ?]
 
-		
    	[?php 
 		$count = 0;
 		foreach ($configuration->getFormFields($form, $form->isNew() ? 'new' : 'edit') as $fieldset => $fields): 
