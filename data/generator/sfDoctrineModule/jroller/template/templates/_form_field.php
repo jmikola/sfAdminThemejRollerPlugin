@@ -13,11 +13,15 @@
           [?php echo __(strip_tags($help), array(), '<?php echo $this->getI18nCatalogue() ?>') ?]
         </div>
       [?php endif; ?]
+
+      [?php if ($form[$name]->hasError() && $form[$name] instanceof sfFormFieldSchema && !count($form[$name]->getWidget()->getGlobalErrors(array()))): ?]
+        <span class="ui-icon ui-icon-alert floatleft"></span>
+      [?php endif; ?]
     </div>
 
     [?php echo $form[$name]->render($attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes) ?]
 
-    [?php if ($form[$name]->hasError()): ?]
+    [?php if ($form[$name]->hasError() && (!$form[$name] instanceof sfFormFieldSchema || count($form[$name]->getWidget()->getGlobalErrors(array())))): ?]
       <div class="errors">
         <span class="ui-icon ui-icon-alert floatleft"></span>
         [?php echo $form[$name]->renderError() ?]
